@@ -5,3 +5,8 @@ application.yml : 애플리케이션 기본 설정
 - dev(개발), prod(운영), test(테스트) 환경
 
 application.yml 에 mail 환경 내 것으로 꼭 변경할 것.
+
+---
+
+### 공부 메모
+
