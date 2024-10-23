@@ -1,5 +1,6 @@
 package com.koreait.exam.springbatch_app_10.app.handler;
 
+import com.koreait.exam.springbatch_app_10.app.security.dto.MemberContext;
 import com.koreait.exam.springbatch_app_10.util.Ut;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.DefaultRedirectStrategy;
