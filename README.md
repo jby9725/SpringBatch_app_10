@@ -32,3 +32,8 @@ application.yml 에 mail 환경 내 것으로 꼭 변경할 것.
 
 상품 등록,수정 -> 장바구니, 내부 화폐 도입 -> 주문, 환불 기능 -> 주문 상세 보기
 
+---
+
+const tossPayments = TossPayments("payments 개발자센터 -> 내 개발 정보 -> API 개별 연동 키 -> 클라이언트 키");
+
+private final String SECRET_KEY = "payments 개발자센터 -> 내 개발 정보 -> API 개별 연동 키 -> 시크릿 키";
