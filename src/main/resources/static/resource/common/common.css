@@ -6,14 +6,14 @@
 /*}*/
 
 @font-face {
-    font-family: 'GabiaGosran-Regular';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2409-2@1.0/GabiaGosran-Regular.woff2') format('woff2');
+    font-family: 'yg-jalnan';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 html > body {
-    font-family: 'GabiaGosran-Regular', sans-serif !important;
+    font-family: 'yg-jalnan', sans-serif;
     text-underline-position: under;
     color: #444;
 }
