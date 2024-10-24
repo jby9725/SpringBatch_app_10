@@ -24,3 +24,6 @@ application.yml 에 mail 환경 내 것으로 꼭 변경할 것.
 - 정산까지.
 
 ---
+
+상품 등록 create 후 db에 save
+상품 등록 후 옵션 변경도 할 수 있도록 modify 
