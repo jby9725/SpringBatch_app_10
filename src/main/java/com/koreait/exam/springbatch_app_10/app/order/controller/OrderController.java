@@ -3,6 +3,7 @@ package com.koreait.exam.springbatch_app_10.app.order.controller;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.koreait.exam.springbatch_app_10.app.member.entity.Member;
+import com.koreait.exam.springbatch_app_10.app.member.service.MemberService;
 import com.koreait.exam.springbatch_app_10.app.order.entity.Order;
 import com.koreait.exam.springbatch_app_10.app.order.exception.ActorCanNotSeeOrderException;
 import com.koreait.exam.springbatch_app_10.app.order.exception.OrderIdNotMatchedException;
@@ -34,6 +35,7 @@ import java.util.Map;
 @RequestMapping("order")
 public class OrderController {
     private final OrderService orderService;
+    private final MemberService memberService;
 
     private final RestTemplate restTemplate = new RestTemplate();
     private final ObjectMapper objectMapper;
@@ -45,11 +47,14 @@ public class OrderController {
 
         Member actor = memberContext.getMember();
 
+        long restCash = memberService.getRestCash(actor);
+
         if (orderService.actorCanSee(actor, order) == false) {
             throw new ActorCanNotSeeOrderException();
         }
 
         model.addAttribute("order", order);
+        model.addAttribute("actorRestCash", restCash);
 
         return "order/detail";
     }
